@@ -469,6 +469,44 @@ dataframe3</code></pre>
 </ol>
 <p>list4是lists类型数据，list4[<a href="#section-1">2</a>]和list4[[4]]分别表示list4的第2个和第4个元素，二者都是数字类型，可以进行相加计算.list4<a href="#section-1">2</a>和list4[4]分别表示只包含第2个和第4个元素的新list，两个list不能直接进行相加运算。</p>
 </div>
+<div id="working-with-functions-and-operators." class="section level3">
+<h3>3. Working with functions and operators.</h3>
+<ol style="list-style-type: lower-alpha">
+<li>The colon operator will create a sequence of integers in order. It
+is a special case of the function seq() which you saw earlier in this
+assignment. Using the help command ?seq to learn about the function,
+design an expression that will give you the sequence of numbers from 1
+to 10000 in increments of 372. Design another that will give you a
+sequence between 1 and 10000 that is exactly 50 numbers in length.</li>
+</ol>
+<pre class="r"><code>seq1 &lt;- seq(1,10000,by = 372)
+seq1</code></pre>
+<pre><code>##  [1]    1  373  745 1117 1489 1861 2233 2605 2977 3349 3721 4093 4465 4837 5209
+## [16] 5581 5953 6325 6697 7069 7441 7813 8185 8557 8929 9301 9673</code></pre>
+<pre class="r"><code>seq2 &lt;- seq(1,10000,length.out = 50)
+seq2</code></pre>
+<pre><code>##  [1]     1.0000   205.0612   409.1224   613.1837   817.2449  1021.3061
+##  [7]  1225.3673  1429.4286  1633.4898  1837.5510  2041.6122  2245.6735
+## [13]  2449.7347  2653.7959  2857.8571  3061.9184  3265.9796  3470.0408
+## [19]  3674.1020  3878.1633  4082.2245  4286.2857  4490.3469  4694.4082
+## [25]  4898.4694  5102.5306  5306.5918  5510.6531  5714.7143  5918.7755
+## [31]  6122.8367  6326.8980  6530.9592  6735.0204  6939.0816  7143.1429
+## [37]  7347.2041  7551.2653  7755.3265  7959.3878  8163.4490  8367.5102
+## [43]  8571.5714  8775.6327  8979.6939  9183.7551  9387.8163  9591.8776
+## [49]  9795.9388 10000.0000</code></pre>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>The function rep() repeats a vector some number of times. Explain
+the difference between rep(1:3, times=3) and rep(1:3, each=3).</li>
+</ol>
+<pre class="r"><code>rep1 &lt;- rep(1:3, times=3)
+rep1</code></pre>
+<pre><code>## [1] 1 2 3 1 2 3 1 2 3</code></pre>
+<pre class="r"><code>rep2 &lt;- rep(1:3, each=3)
+rep2</code></pre>
+<pre><code>## [1] 1 1 1 2 2 2 3 3 3</code></pre>
+<p>rep(1:3, times=3)表示把1:3一起重复3次，rep(1:3,
+each=3)表示把1:3分别重复3次.</p>
+</div>
 </div>
 
 
