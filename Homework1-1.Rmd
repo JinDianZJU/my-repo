@@ -1,0 +1,45 @@
+---
+title: "Homework1-1"
+author: "JinDian"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+## 1
+
+ The Iowa data set iowa.csv is a toy example that summarises the yield of wheat (bushels per acre) for
+ the state of Iowa between 1930-1962. In addition to yield, year, rainfall and temperature were recorded
+ as the main predictors of yield.
+ a. First, we need to load the data set into R using the command read.csv(). Use the help function
+ to learn what arguments this function takes. Once you have the necessary input, load the data
+ set into R and make it a data frame called iowa.df.
+ 
+ b. How many rows and columns does iowa.df have?
+ 
+ c. What are the names of the columns of iowa.df?
+ 
+ d. What is the value of row 5, column 7 of iowa.df?
+ 
+ e. Display the second row of iowa.df in its entirety
+
+```{r}
+iowa.df <- read.csv("data/iowa.csv",header=T,sep = ";")
+iowa.df
+```
+b.33 rows,10 columns.
+
+c.Year,Rain0,Temp1,Rain1,Temp2,Rain2,Temp3,Rain3,Temp4,Yield.
+
+d.the value of row 5,column 7 of iowa.df is `r iowa.df[5,7]`.
+
+e.
+```{r}
+iowa.df[2,]
+```
+
