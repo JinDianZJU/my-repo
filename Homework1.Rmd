@@ -12,7 +12,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
------
 ## 1
 
 ### The Iowa data set iowa.csv is a toy example that summarises the yield of wheat (bushels per acre) for the state of Iowa between 1930-1962. In addition to yield, year, rainfall and temperature were recorded as the main predictors of yield.
@@ -43,7 +42,7 @@ e.
 ```{r}
 iowa.df[2,]
 ```
------
+
 ## 2
 
 ### a. For each of the following commands, either explain why they should be errors, or explain the non-erroneous result.
@@ -160,7 +159,7 @@ rep2
   library(tidyr)
   library(tibble)
   library(DAAG)
-  result <- ais |>  group_by(sex,sport) |> summarise(Count = n()) |>  pivot_wider(names_from = sport, values_from = Count, values_fill = 0) |> column_to_rownames(var = "sex")
+  result <- ais |>  group_by(sex) |> count(sport,name = "Count") |>  pivot_wider(names_from = sport, values_from = Count, values_fill = 0) |> column_to_rownames(var = "sex")
   
   print(result)
   tresult <- (t(result))
@@ -169,6 +168,7 @@ rep2
   imbalance <- filter(tresult,(f / m >= 2)|(f / m <=0.5))
   imbalance
 ```
+
 
 ##MB.Ch1.6.
 ###Create a data frame called Manitoba.lakes that contains the lake’s elevation (in meters above sea level) and area (in square kilometers) as listed below. Assign the names of the lakes using the row.names() function.
